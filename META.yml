@@ -1,18 +1,27 @@
---- 
+---
 abstract: kensiro-sinsu
-author: 
-  - Tokuhiro Matsuno  C<< <tokuhiro __at__ mobilefactory.jp> >>
+author:
+  - 'Tokuhiro Matsuno  C<< <tokuhiro __at__ mobilefactory.jp> >>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.98
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: Module::Install version 0.68
+generated_by: 'Module::Install version 1.02'
 license: perl
-meta-spec: 
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: Acme-Kensiro
-no_index: 
-  directory: 
+no_index:
+  directory:
     - inc
     - t
-requires: 
-  Exporter: 0
-version: 0.04
+    - xt
+requires:
+  Exporter: 5.62
+  perl: 5.8.1
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.07

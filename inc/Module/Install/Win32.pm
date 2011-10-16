@@ -2,12 +2,12 @@
 package Module::Install::Win32;
 
 use strict;
-use Module::Install::Base;
+use Module::Install::Base ();
 
 use vars qw{$VERSION @ISA $ISCORE};
 BEGIN {
-	$VERSION = '0.73';
-	@ISA     = qw{Module::Install::Base};
+	$VERSION = '1.02';
+	@ISA     = 'Module::Install::Base';
 	$ISCORE  = 1;
 }
 
