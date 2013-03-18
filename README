@@ -1,18 +1,26 @@
-Acme-Kensiro version 0.0.1
+NAME
+    Acme::Kensiro - kensiro-sinsu
 
-INSTALLATION
+SYNOPSIS
+        use Acme::Kensiro;
+        kensiro(16); # => あたたたた
 
-To install this module, run the following commands:
+DESCRIPTION
+    kensiro-sinsu.
 
-    perl Makefile.PL
-    make
-    make test
-    make install
+BUGS AND LIMITATIONS
+    No bugs have been reported.
 
+SEE ALSO
+    <http://www.asahi-net.or.jp/~rc4t-ishr/kensiro.html>
 
-COPYRIGHT AND LICENCE
+AUTHOR
+    Tokuhiro Matsuno "<tokuhirom __@__ gmail.com>"
 
-Copyright (C) 2007, Tokuhiro Matsuno
+LICENCE AND COPYRIGHT
+    Copyright (c) 2007, Tokuhiro Matsuno "<tokuhiro __at__
+    mobilefactory.jp>". All rights reserved.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself.
+    This module is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself. See perlartistic.
+

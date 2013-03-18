@@ -1,14 +1,17 @@
 ---
 abstract: kensiro-sinsu
 author:
-  - 'Tokuhiro Matsuno  C<< <tokuhiro __at__ mobilefactory.jp> >>'
+  - 'Tokuhiro Matsuno  C<< <tokuhirom __@__ gmail.com> >>'
 build_requires:
-  ExtUtils::MakeMaker: 6.42
+  Module::Build::Pluggable::CPANfile: 0.02
+  Module::Build::Pluggable::GithubMeta: 0
   Test::More: 0.98
 configure_requires:
-  ExtUtils::MakeMaker: 6.42
-distribution_type: module
-generated_by: 'Module::Install version 1.02'
+  Module::Build: 0.40
+  Module::Build::Pluggable::CPANfile: 0.02
+  Module::Build::Pluggable::GithubMeta: 0
+dynamic_config: 0
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,9 +22,15 @@ no_index:
     - inc
     - t
     - xt
+provides:
+  Acme::Kensiro:
+    file: lib/Acme/Kensiro.pm
+    version: 0.08
 requires:
   Exporter: 5.62
-  perl: 5.8.1
+  perl: 5.010001
 resources:
+  homepage: https://github.com/tokuhirom/Acme-Kensiro/tree
   license: http://dev.perl.org/licenses/
-version: 0.07
+  repository: git://github.com/tokuhirom/Acme-Kensiro.git
+version: 0.08

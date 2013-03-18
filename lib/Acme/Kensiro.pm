@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Exporter 'import';
 our @EXPORT = 'kensiro';
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 use 5.008001;
 
@@ -20,6 +20,8 @@ sub kensiro {
 
 1;
 __END__
+
+=encoding utf-8
 
 =head1 NAME
 
@@ -44,7 +46,7 @@ L<http://www.asahi-net.or.jp/~rc4t-ishr/kensiro.html>
 
 =head1 AUTHOR
 
-Tokuhiro Matsuno  C<< <tokuhiro __at__ mobilefactory.jp> >>
+Tokuhiro Matsuno  C<< <tokuhirom __@__ gmail.com> >>
 
 =head1 LICENCE AND COPYRIGHT
 
