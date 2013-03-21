@@ -4,35 +4,18 @@
       "Tokuhiro Matsuno  C<< <tokuhirom __@__ gmail.com> >>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
-   "license" : [
-      "perl_5"
-   ],
+   "generated_by" : "Minilla/0.0.36",
+   "license" : "perl_5",
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
    "name" : "Acme-Kensiro",
-   "no_index" : {
-      "directory" : [
-         "inc",
-         "t",
-         "xt"
-      ]
-   },
    "prereqs" : {
-      "build" : {
-         "requires" : {
-            "Module::Build::Pluggable::CPANfile" : "0.02",
-            "Module::Build::Pluggable::GithubMeta" : "0",
-            "Test::More" : "0.98"
-         }
-      },
+      "build" : {},
       "configure" : {
          "requires" : {
-            "Module::Build" : "0.40",
-            "Module::Build::Pluggable::CPANfile" : "0.02",
-            "Module::Build::Pluggable::GithubMeta" : "0"
+            "Module::Build" : "0.40"
          }
       },
       "runtime" : {
@@ -40,23 +23,25 @@
             "Exporter" : "5.62",
             "perl" : "5.010001"
          }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.98"
+         }
       }
    },
    "provides" : {
       "Acme::Kensiro" : {
          "file" : "lib/Acme/Kensiro.pm",
-         "version" : "0.08"
+         "version" : "0.09"
       }
    },
    "release_status" : "stable",
    "resources" : {
-      "homepage" : "https://github.com/tokuhirom/Acme-Kensiro/tree",
-      "license" : [
-         "http://dev.perl.org/licenses/"
-      ],
+      "homepage" : "git://github.com/tokuhirom/Acme-Kensiro/tree",
       "repository" : {
          "url" : "git://github.com/tokuhirom/Acme-Kensiro.git"
       }
    },
-   "version" : "0.08"
+   "version" : "0.09"
 }

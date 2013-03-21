@@ -1,12 +1,13 @@
+.gitignore
+.shipit
+.ukigumo.yml
 Build.PL
 Changes
+LICENSE
+MANIFEST
+MANIFEST.SKIP
 cpanfile
 lib/Acme/Kensiro.pm
-LICENSE
-MANIFEST			This list of files
-META.json
-META.yml
-README
 t/00.load.t
 t/03.code.t
 xt/01_podspell.t

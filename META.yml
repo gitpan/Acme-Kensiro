@@ -3,34 +3,24 @@ abstract: kensiro-sinsu
 author:
   - 'Tokuhiro Matsuno  C<< <tokuhirom __@__ gmail.com> >>'
 build_requires:
-  Module::Build::Pluggable::CPANfile: 0.02
-  Module::Build::Pluggable::GithubMeta: 0
   Test::More: 0.98
 configure_requires:
   Module::Build: 0.40
-  Module::Build::Pluggable::CPANfile: 0.02
-  Module::Build::Pluggable::GithubMeta: 0
 dynamic_config: 0
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Minilla/0.0.36, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Acme-Kensiro
-no_index:
-  directory:
-    - inc
-    - t
-    - xt
 provides:
   Acme::Kensiro:
     file: lib/Acme/Kensiro.pm
-    version: 0.08
+    version: 0.09
 requires:
   Exporter: 5.62
   perl: 5.010001
 resources:
-  homepage: https://github.com/tokuhirom/Acme-Kensiro/tree
-  license: http://dev.perl.org/licenses/
+  homepage: git://github.com/tokuhirom/Acme-Kensiro/tree
   repository: git://github.com/tokuhirom/Acme-Kensiro.git
-version: 0.08
+version: 0.09
