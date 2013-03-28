@@ -1,40 +1,45 @@
 use strict;
 use Module::Build;
-use 5.008001;
+use File::Basename;
+use File::Spec;
+use CPAN::Meta;
+use CPAN::Meta::Prereqs;
 
-my $builder = Module::Build->new(%{
-{
-  'build_requires' => {
-                        'Test::More' => '0.98'
-                      },
-  'module_name' => 'Acme-Kensiro',
-  'recursive_test_files' => 1,
-  'dynamic_config' => 0,
-  'configure_requires' => {
-                            'Module::Build' => '0.40'
-                          },
-  'dist_name' => 'Acme-Kensiro',
-  'requires' => {
-                  'Exporter' => '5.62',
-                  'perl' => '5.010001'
-                },
-  'create_readme' => 1,
-  'no_index' => {
-                  'directory' => [
-                                   'inc'
-                                 ]
-                },
-  'dist_version' => bless( {
-                             'original' => '0.09',
-                             'version' => [
-                                            0,
-                                            90
-                                          ]
-                           }, 'version' ),
-  'license' => 'Perl_5',
-  'test_files' => 't/',
-  'script_files' => []
-}
+use 5.008;
 
-});
+my $builder = Module::Build->new(
+    license              => 'perl',
+    dynamic_config       => 0,
+
+    configure_requires => {
+        'Module::Build' => 0.40,
+    },
+
+    no_index    => { 'directory' => [ 'inc' ] },
+    name        => 'Acme-Kensiro',
+    module_name => 'Acme::Kensiro',
+
+    script_files => [glob('script/*'), glob('bin/*')],
+
+    test_files           => ((-d '.git' || $ENV{RELEASE_TESTING}) && -d 'xt') ? 't/ xt/' : 't/',
+    recursive_test_files => 1,
+);
 $builder->create_build_script();
+
+my $mbmeta = CPAN::Meta->load_file('MYMETA.json');
+my $meta = CPAN::Meta->load_file('META.json');
+my $prereqs_hash = CPAN::Meta::Prereqs->new(
+    $meta->prereqs
+)->with_merged_prereqs(
+    CPAN::Meta::Prereqs->new($mbmeta->prereqs)
+)->as_string_hash;
+my $mymeta = CPAN::Meta->new(
+    {
+        %{$meta->as_struct},
+        prereqs => $prereqs_hash
+    }
+);
+print "Merging cpanfile prereqs to MYMETA.yml\n";
+$mymeta->save('MYMETA.yml', { version => 1.4 });
+print "Merging cpanfile prereqs to MYMETA.json\n";
+$mymeta->save('MYMETA.json', { version => 2 });

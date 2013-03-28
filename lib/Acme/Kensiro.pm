@@ -3,7 +3,8 @@ use strict;
 use warnings;
 use Exporter 'import';
 our @EXPORT = 'kensiro';
-our $VERSION = '0.09';
+
+our $VERSION = '0.11';
 
 use 5.008001;
 
@@ -20,6 +21,8 @@ sub kensiro {
 
 1;
 __END__
+
+=for stopwords kensiro sinsu
 
 =encoding utf-8
 
