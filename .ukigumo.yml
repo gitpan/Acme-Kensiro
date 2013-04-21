@@ -1,2 +1,0 @@
-before_install:
-  - "cpanm Module::Install"
