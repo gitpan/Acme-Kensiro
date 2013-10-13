@@ -1,14 +1,21 @@
 use strict;
+use warnings;
 use Test::More;
-use File::Spec;
-eval q{ use Test::Spellunker };
-plan skip_all => "Test::Spellunker is not installed." if $@;
+BEGIN {
+    eval q[use Test::Spelling];
+    plan(skip_all => "Test::Spelling required for testing spelling") if $@;
+}
 
-plan skip_all => "no ENV[HOME]" unless $ENV{HOME};
-my $spelltest_switchfile = ".spellunker.en";
-plan skip_all => "no ~/$spelltest_switchfile" unless -e File::Spec->catfile($ENV{HOME}, $spelltest_switchfile);
+my @stopwords = split /\n/, <<'EOF';
+Tokuhiro
+Matsuno
+IP
+ip
+yaml
+kensiro
+sinsu
+EOF
 
-add_stopwords('Acme-Kensiro');
-add_stopwords(qw(otsune tokuhirom tokuhirom));
+add_stopwords(@stopwords);
+all_pod_files_spelling_ok;
 
-all_pod_files_spelling_ok('lib');
