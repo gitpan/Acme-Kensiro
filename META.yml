@@ -5,9 +5,9 @@ author:
 build_requires:
   Test::More: '0.98'
 configure_requires:
-  Module::Build::Tiny: '0.035'
+  Module::Build: '0.38'
 dynamic_config: 0
-generated_by: 'Minilla/v0.14.1, CPAN::Meta::Converter version 2.140640'
+generated_by: 'Minilla/v1.1.0, CPAN::Meta::Converter version 2.141520'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -26,7 +26,7 @@ no_index:
 provides:
   Acme::Kensiro:
     file: lib/Acme/Kensiro.pm
-    version: '0.15'
+    version: '0.16'
 requires:
   Exporter: '5.62'
   perl: '5.008001'
@@ -34,7 +34,7 @@ resources:
   bugtracker: https://github.com/tokuhirom/Acme-Kensiro/issues
   homepage: https://github.com/tokuhirom/Acme-Kensiro
   repository: git://github.com/tokuhirom/Acme-Kensiro.git
-version: '0.15'
+version: '0.16'
 x_contributors:
   - 'otsune <otsune@d0d07461-0603-4401-acd4-de1884942a52>'
   - 'tokuhirom <tokuhirom@d0d07461-0603-4401-acd4-de1884942a52>'

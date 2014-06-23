@@ -1,5 +1,9 @@
 Revision history for Perl module Acme::Kensiro
 
+0.16 2014-06-23T09:34:31Z
+
+    - Back to Module::Build.
+
 0.15 2014-05-01T00:20:17Z
 
     - Switch to Module::Build::Tiny
